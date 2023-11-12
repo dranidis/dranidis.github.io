@@ -1,7 +1,7 @@
 +++
 title = 'Creating my personal page with Hugo'
 date = 2023-11-12T12:11:12+02:00
-draft = true
+draft = false
 showtoc = true
 tocopen = false
 tags = ['Hugo']
