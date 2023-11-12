@@ -11,7 +11,7 @@ hidemeta = true
 disableShare = true
 +++
 
-I am Dimitris Dranidis, a Computer Science Educator and a Quality Assurance practitioner. I have a passion for Software quality, clean code, testing and in particular automated testing, agility and education.
+I am Dimitris Dranidis, a Computer Science educator and a Quality Assurance practitioner. I have a passion for Software quality, clean code, testing and in particular automated testing, agility and education.
 
 ## Professional Experience
 

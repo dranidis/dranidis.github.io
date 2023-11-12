@@ -42,11 +42,21 @@ params:
     - name: stackoverflow
       url: "https://stackoverflow.com/users/22857518/dimitris-dranidis"
 
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0 # Determines approximately where in the text is the pattern expected to be found.
+    distance: 100 # A distance of 100 would require a perfect match to be within 20 characters of the location to be found using a threshold of 0.2
+    threshold: 0.3 # At what point does the match algorithm give up. A threshold of 0.0 requires a perfect match (of both letters and location), a threshold of 1.0 would match anything.
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
 outputs:
   home:
     - HTML
     - RSS
-    - JSON # is necessary
+    - JSON
 menu:
   main:
     - identifier: about
@@ -58,8 +68,8 @@ menu:
       url: /posts/
       weight: 15
     - identifier: tags
-      name: Tags
-      url: /tags/
+      name: Projects
+      url: /projects/
       weight: 20
     - identifier: archives
       name: Archives

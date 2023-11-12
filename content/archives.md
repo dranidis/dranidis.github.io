@@ -1,6 +1,6 @@
 +++
 title = "Archives"
-layout ="archives"
+layout = "archives"
 url = "/archives/"
 summary = "archives"
 +++

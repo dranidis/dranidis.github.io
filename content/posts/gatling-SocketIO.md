@@ -401,7 +401,7 @@ The Socket.IO server sends ping text messages to check if the client is still al
             .wsAutoReplySocketIo4();
 ```
 
-Hopefully, this article will save some time from some of you.
+Hopefully, this article will save some time for some of you.
 
 ## Some useful links
 
