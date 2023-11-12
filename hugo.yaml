@@ -1,0 +1,71 @@
+baseURL: "https://example.org/"
+languageCode: en-us
+title: Dimitris Dranidis
+theme: PaperMod
+
+params:
+  env: production
+  author: Dimitris Dranidis
+  ShowShareButtons: true
+  ShowBreadCrumbs: true
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  ShareButtons:
+    - linkedin
+    - twitter
+  hideSummary: false
+  hideFooter: false
+  profileMode:
+    enabled: false
+    title: In Wonderland... and beyond
+    subtitle: "This is my personal blog. I write about things I like, mostly software engineering, testing and software quality."
+    imageUrl: <image link>
+    imageTitle: <title of image as alt>
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: Posts
+        url: /posts
+      - name: Github
+        url: "https://github.com/dranidis"
+  homeInfoParams:
+    title: In Wonderland... and beyond
+    Content: This is my personal blog. I write about things I like, mostly software engineering, testing and software quality. Read more about me [here](/about).
+  socialIcons:
+    - name: linkedin
+      url: "https://gr.linkedin.com/in/dranidis"
+    - name: github
+      url: "https://github.com/dranidis"
+    - name: twitter
+      url: "https://twitter.com/dranidis"
+    - name: stackoverflow
+      url: "https://stackoverflow.com/users/22857518/dimitris-dranidis"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 15
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 25
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
