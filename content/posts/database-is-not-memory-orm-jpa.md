@@ -11,7 +11,7 @@ draft = false
 
 This post discusses experiences gathered and realizations made while trying to implement **Object-Relational Mapping** (ORM) for a Java application using [EclipseLink JPA](http://wiki.eclipse.org/EclipseLink) (Java Persistence API).
 
-The application is a Java implementation of the Payroll case study found in the [**"Agile Software Development"** book by R.C. Martin](http://www.objectmentor.com/omTeam/martin_r.html).
+The application is a Java implementation of the Payroll case study found in the **"Agile Software Development"** book by R.C. Martin.
 
 _The_ _**payroll** case study_
 

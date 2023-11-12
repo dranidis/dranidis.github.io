@@ -1,6 +1,6 @@
 +++
 title = 'Load testing Socket IO with Gatling'
-date = 2023-11-11T16:08:41+02:00
+date = 2023-11-12T16:08:41+02:00
 draft = false
 showtoc = true
 tocopen = false
@@ -377,7 +377,7 @@ With this addition, my debug log when executing with Gatling was identical with 
 ```java
     ScenarioBuilder scene = scenario("WebSocket")
             .exec(ws("Connect WS").connect("/socket.io/?EIO=4&transport=websocket"))
-            .exec(ws("Connet to Socket.IO").sendText("40"))
+            .exec(ws("Connect to Socket.IO").sendText("40"))
             .pause(1)
             .exec(ws("Say hi")
                     .sendText("42[\"message\",\"Hi\"]")
