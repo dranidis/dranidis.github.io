@@ -42,8 +42,7 @@ I am Dimitris Dranidis, a Computer Science educator and a Quality Assurance prac
 
 ## Social Media
 
-Github [@dranidis](https://github.com/dranidis)
+[![Static Badge](https://img.shields.io/badge/dranidis-black?logo=github)](https://github.com/dranidis)
+[![Static Badge](https://img.shields.io/badge/Dimitris_Dranidis-black?logo=linkedin)](https://www.linkedin.com/in/dranidis/)
+[![Static Badge](https://img.shields.io/badge/%40dranidis-black?logo=twitter)](https://twitter.com/dranidis)
 
-Twitter [@dranidis](https://twitter.com/dranidis)
-
-LinkedIn [Dranidis](https://www.linkedin.com/in/dranidis/)
