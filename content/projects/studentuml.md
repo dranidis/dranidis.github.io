@@ -19,4 +19,4 @@ StudentUML is written in Java as a Swing desktop application. Prolog is used for
 
 ## Download StudentUML
 
-StudentUML can be donwloaded from [here](https://bitbucket.org/studentuml/studentuml-public/downloads/).
+StudentUML can be downloaded from [here](https://bitbucket.org/studentuml/studentuml-public/downloads/).

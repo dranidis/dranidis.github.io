@@ -20,7 +20,7 @@ I am Dimitris Dranidis, a Computer Science educator and a Quality Assurance prac
 
 ## Education
 
-- PhD in Computer Science, Ludwigs-Maximilians-University, Munich, Germany
+- PhD in Computer Science, Ludwig-Maximilian's-University, Munich, Germany
 
 ## Skills
 
