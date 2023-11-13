@@ -3,7 +3,7 @@ title = 'StudentUML'
 date = 2023-11-12T19:22:34+02:00
 draft = false
 
-tags = ['UML', 'Object-oriented-analysis-and-design']
+tags = ['uml', 'object-oriented-analysis-and-design']
 
 hidemeta = true
 +++

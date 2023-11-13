@@ -4,7 +4,7 @@ date = 2023-11-12T16:08:41+02:00
 draft = false
 showtoc = true
 tocopen = false
-tags = ['testing','Gatling','Socket.IO','load-testing']
+tags = ['testing','gatling','socket-io','load-testing']
 +++
 
 This article will hopefully save you some of the trouble I had, when I tried to use Gatling for Socket.IO sockets. Gatling has support for web sockets but one has to do a lot of research and workarounds in order to make it work with Socket.IO sockets.

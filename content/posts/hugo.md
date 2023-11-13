@@ -4,7 +4,7 @@ date = 2023-11-12T12:11:12+02:00
 draft = false
 showtoc = true
 tocopen = false
-tags = ['Hugo']
+tags = ['hugo']
 +++
 
 Today I decided to FINALLY create my personal page (the page you are reading right now) with a static page creation tool. I picked [Hugo](https://gohugo.io/) after some research. I liked the facts that it is fast, written in Go (I like Go!), it offers full customization and you don't need to install anything apart from the application itself which is available in all platforms.
