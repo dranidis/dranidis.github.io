@@ -17,21 +17,16 @@ params:
   hideSummary: false
   hideFooter: false
   profileMode:
-    enabled: false
+    enabled: true
     title: In Wonderland... and beyond
-    subtitle: "This is my personal blog. I write about things I like, mostly software engineering, testing and software quality."
-    imageUrl: <image link>
-    imageTitle: <title of image as alt>
+    subtitle: "This is my personal blog. I write about topics that I enjoy, mostly about software engineering, testing and software quality."
+   #  imageUrl: <image link>
+   # imageTitle: <title of image as alt>
     imageWidth: 120
     imageHeight: 120
-    buttons:
-      - name: Posts
-        url: /posts
-      - name: Github
-        url: "https://github.com/dranidis"
   homeInfoParams:
     title: In Wonderland... and beyond
-    Content: This is my personal blog. I write about things I like, mostly software engineering, testing and software quality. Read more about me [here](/about).
+    Content: This is my personal blog. I write about topics that I enjoy, mostly about software engineering, testing and software quality. Read more about me [here](/about).
   socialIcons:
     - name: linkedin
       url: "https://gr.linkedin.com/in/dranidis"

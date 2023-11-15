@@ -1,5 +1,5 @@
 +++
-title = 'Who am i?'
+title = 'Who am I?'
 date = 2023-11-11T16:08:41+02:00
 draft = false
 
@@ -11,7 +11,7 @@ hidemeta = true
 disableShare = true
 +++
 
-I am Dimitris Dranidis, a Computer Science educator and a Quality Assurance practitioner. I have a passion for Software quality, clean code, testing and in particular automated testing, agility and education.
+I am **Dimitris Dranidis**, a Computer Science educator and a Quality Assurance practitioner. I am passionate  about software quality, clean code, testing and in particular automated testing, agility and education.
 
 ## Professional Experience
 
@@ -32,8 +32,8 @@ I am Dimitris Dranidis, a Computer Science educator and a Quality Assurance prac
 
 ## Projects
 
-- [JSXM](http://jsxm.org/) \- A model based testing tool for the automated generation of test cases
-- [StudentUML](https://bitbucket.org/studentuml/studentuml-public/downloads/) \- An educational UML drawing tool with consistency checking
+- [JSXM](/projects/jsxm) \- A model based testing tool for the automated generation of test cases
+- [StudentUML](/projects/studentuml) \- An educational UML drawing tool with consistency checking
 
 ## Hobbies
 
