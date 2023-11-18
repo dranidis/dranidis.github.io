@@ -3,12 +3,11 @@
     "Breezz",
     "hidemeta",
     "JSXM",
+    "msgpack",
+    "showtoc",
     "stackoverflow",
+    "tocopen",
     "WQYQ"
   ],
-  "cSpell.enableFiletypes": [
-    "!yaml",
-    "!yml",
-    "!toml"
-  ]
+  "cSpell.enableFiletypes": ["!yaml", "!yml", "!toml"]
 }

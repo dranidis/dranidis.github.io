@@ -403,6 +403,12 @@ The Socket.IO server sends ping text messages to check if the client is still al
 
 Hopefully, this article will save some time for some of you.
 
+> **Edit**:
+>
+> Read my second article about Gatling and Socket.IO, this time dealing with a server using a Message Pack parser:
+>
+> - [Load testing Socket.IO servers using msgpack-parser with Gatling](/posts/gatling-socketio-msgpack/)
+
 ## Some useful links
 
 - https://socket.io/docs/v4/socket-io-protocol/
