@@ -1,4 +1,4 @@
-baseURL: "https://dranidis.github.io/"
+baseURL: "https://dranidis.gr/"
 languageCode: en-us
 title: Dimitris Dranidis
 theme: PaperMod
@@ -20,8 +20,8 @@ params:
     enabled: true
     title: In Wonderland... and beyond
     subtitle: "This is my personal blog. I write about topics that I enjoy, mostly about software engineering, testing and software quality."
-   #  imageUrl: <image link>
-   # imageTitle: <title of image as alt>
+    #  imageUrl: <image link>
+    # imageTitle: <title of image as alt>
     imageWidth: 120
     imageHeight: 120
   homeInfoParams:
@@ -74,5 +74,3 @@ menu:
       name: Search
       url: /search/
       weight: 30
-
-
