@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "hugo --gc --minify  -b $DEPLOY_PRIME_URL"
+  command = "hugo --gc --minify  -b https://dranidis.gr/"
 
   [build.environment]
     HUGO_VERSION = "0.119.0"
@@ -10,16 +10,16 @@
   HUGO_ENABLEGITINFO = "true"
 
 [context.split1]
-  command = "hugo --gc --minify --enableGitInfo  -b $DEPLOY_PRIME_URL"
+  command = "hugo --gc --minify --enableGitInfo  -b https://dranidis.gr/"
 
   [context.split1.environment]
     HUGO_ENV = "production"
 
 [context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+  command = "hugo --gc --minify --buildFuture -b https://dranidis.gr/"
 
 [context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = "hugo --gc --minify -b https://dranidis.gr/"
 
 [context.next.environment]
   HUGO_ENABLEGITINFO = "true"
