@@ -39,7 +39,7 @@ params:
     - name: stackoverflow
       url: "https://stackoverflow.com/users/22857518/dimitris-dranidis"
     - name: "rss"
-      url: "http://localhost:1313/index.xml"
+      url: "https://dranidis.gr/index.xml"
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
