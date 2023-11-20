@@ -2,18 +2,20 @@ baseURL: "https://dranidis.gr/"
 languageCode: en-us
 title: Dimitris Dranidis
 theme: PaperMod
+author:
+  name: Dimitris Dranidis
 
 params:
   env: production
   author: Dimitris Dranidis
   ShowShareButtons: true
+  ShareButtons:
+    - linkedin
+    - twitter
   ShowBreadCrumbs: true
   ShowReadingTime: true
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
-  ShareButtons:
-    - linkedin
-    - twitter
   hideSummary: false
   hideFooter: false
   profileMode:
@@ -36,7 +38,8 @@ params:
       url: "https://twitter.com/dranidis"
     - name: stackoverflow
       url: "https://stackoverflow.com/users/22857518/dimitris-dranidis"
-
+    - name: "rss"
+      url: "http://localhost:1313/index.xml"
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
