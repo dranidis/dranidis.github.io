@@ -11,7 +11,7 @@ hidemeta = true
 disableShare = true
 +++
 
-I am **Dimitris Dranidis**, a Computer Science educator and a Quality Assurance practitioner. I am passionate  about software quality, clean code, testing and in particular automated testing, agility and education.
+I am **Dimitris Dranidis**, a Computer Science educator and a Quality Assurance practitioner. I am passionate about software quality, clean code, testing and in particular automated testing, agility and education.
 
 ## Professional Experience
 
@@ -29,6 +29,9 @@ I am **Dimitris Dranidis**, a Computer Science educator and a Quality Assurance 
 - Agile methods
 - Object-oriented Analysis and Design
 - Formal methods
+- Software Engineering
+- Project Management
+- Learning and Teaching Technologies
 
 ## Projects
 
@@ -40,9 +43,17 @@ I am **Dimitris Dranidis**, a Computer Science educator and a Quality Assurance 
 - Board game designer: [Grand Bazaar](https://boardgamegeek.com/boardgame/210108/grand-bazaar)
 - Guitar player in a local Jazz band: "Breezz"
 
+## Languages
+
+I love learning new languages. A language is a reflection of the country's culture.
+
+- _Native_: Greek
+- _Fluent_: English, German
+- _Independent user_: Turkish
+- _Basic user_: Japanese, Spanish, Italian
+
 ## Social Media
 
 [![Static Badge](https://img.shields.io/badge/dranidis-black?logo=github)](https://github.com/dranidis)
 [![Static Badge](https://img.shields.io/badge/Dimitris_Dranidis-black?logo=linkedin)](https://www.linkedin.com/in/dranidis/)
 [![Static Badge](https://img.shields.io/badge/%40dranidis-black?logo=twitter)](https://twitter.com/dranidis)
-
