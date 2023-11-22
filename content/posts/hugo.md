@@ -47,7 +47,12 @@ You already get some useful feedback from Hugo about the next steps. That's nice
 cd <name>
 ```
 
-What took me most of the time was to decide which theme to use. Picking one out of hundreds of themes at [Hugo Themes](https://themes.gohugo.io/) was not easy. I would have liked some kind of better filtering there... but anyway. Once I realized that the order was according to GitHub Stars I visited the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme. I wanted a theme offering Dark, Blog, and Minimal and this fitted my requirements. It's documentation seemed quite detailed so I took the decision to use it.
+What took me most of the time was to decide which theme to use.
+Picking one out of hundreds of themes at [Hugo Themes](https://themes.gohugo.io/) was not easy.
+I would have liked some kind of better filtering there... but anyway.
+Once I realized that the order was according to GitHub Stars I visited the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme.
+I wanted a theme offering Dark, Blog, and Minimal and this fitted my requirements.
+Its documentation seemed quite detailed so I took the decision to use it.
 
 Following the documentation I executed:
 

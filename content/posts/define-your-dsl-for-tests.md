@@ -77,6 +77,8 @@ Employing techniques called fluent interface, method chaining this piece of code
 
 The resulting code is shorter, cleaner, less cluttered and easier to read and understand.
 
+## Fluent interface
+
 A fluent interface is an object-oriented interface whose goal is to increase code readability by creating a (small) DSL and its design is based on method chaining.
 
 ## Links
