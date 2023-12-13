@@ -19,39 +19,35 @@ Some time ago, I created a network diagram application for project management. T
 Let me give you an example of a test:
 
 ```java
-    @Test
-    public void criticalPath_Should_WorkWithTransitiveDependencies()
-            throws DuplicateTaskKeyException, KeyNotFoundException {
-        List<TaskData> taskList = new ArrayList<>();
-        taskList.add(new TaskData("A", 4,
-                Arrays.asList(new DependencyData[] {})));
-        taskList.add(new TaskData("B", 4,
-                Arrays.asList(new DependencyData[] {})));
-        taskList.add(new TaskData("C", 2,
-                Arrays.asList(new DependencyData[] {
-                  new DependencyData("A", "FS"),
-                  new DependencyData("B", "FS") })));
-        taskList.add(new TaskData("D", 2,
-                Arrays.asList(new DependencyData[] {
-                  new DependencyData("A", "FS"),
-                  new DependencyData("B", "FS") })));
-        taskList.add(new TaskData("E", 3,
-                Arrays.asList(new DependencyData[] {
-                  new DependencyData("A", "FS"),
-                  new DependencyData("B", "FS"),
-                  new DependencyData("C", "FS"),
-                  new DependencyData("D", "FS") })));
-        taskList.add(new TaskData("F", 3,
-                Arrays.asList(new DependencyData[] {
-                  new DependencyData("A", "FS"),
-                  new DependencyData("B", "FS"),
-                  new DependencyData("C", "FS"),
-                  new DependencyData("D", "FS") })));
-
-        NetworkDiagram nd = new NetworkDiagram();
-        DiagramNetworkReaderService.processTaskList(nd, taskList);
+@Test
+public void criticalPath_Should_WorkWithTransitiveDependencies() {
+    List<TaskData> taskList = new ArrayList<>();
+    taskList.add(new TaskData("A", 4,
+            Arrays.asList(new DependencyData[] {})));
+    taskList.add(new TaskData("B", 4,
+            Arrays.asList(new DependencyData[] {})));
+    taskList.add(new TaskData("C", 2,
+            Arrays.asList(new DependencyData[] {
+              new DependencyData("A", "FS"),
+              new DependencyData("B", "FS") })));
+    taskList.add(new TaskData("D", 2,
+            Arrays.asList(new DependencyData[] {
+              new DependencyData("A", "FS"),
+              new DependencyData("B", "FS") })));
+    taskList.add(new TaskData("E", 3,
+            Arrays.asList(new DependencyData[] {
+              new DependencyData("A", "FS"),
+              new DependencyData("B", "FS"),
+              new DependencyData("C", "FS"),
+              new DependencyData("D", "FS") })));
+    taskList.add(new TaskData("F", 3,
+            Arrays.asList(new DependencyData[] {
+              new DependencyData("A", "FS"),
+              new DependencyData("B", "FS"),
+              new DependencyData("C", "FS"),
+              new DependencyData("D", "FS") })));
 ...
-    }
+}
 ```
 
 I have skipped the assertions. The first part of the test focuses on setting up the test, that is creating all the necesary objects and their conncetions. In this case, the goal is to create a network diagram object with several task objects each having an id, a duration and a list of dependency objects to other tasks. A dependency has an id (a reference to the task it depends to) and the type of dependency ("FS" indicates a Finish to Start dependency).
@@ -59,23 +55,22 @@ I have skipped the assertions. The first part of the test focuses on setting up 
 Employing techniques such as fluent interface and  method chaining, this piece of code may look like this:
 
 ```java
-    @Test
-    public void criticalPath_Should_WorkWithTransitiveDependencies()
-            throws DuplicateTaskKeyException, KeyNotFoundException {
-        TaskDataList tasklist = taskList()
-                .add(task("A", 4))
-                .add(task("B", 4))
-                .add(task("C", 2).withPred("A").withPred("B"))
-                .add(task("D", 2).withPred("A").withPred("B"))
-                .add(task("E", 3).withPred("A", "FS").withPred("B", "FS")
-                                  .withPred("C", "FS").withPred("D", "FS"))
-                .add(task("F", 3).withPred("A", "FS").withPred("B", "FS")
-                                  .withPred("C", "FS").withPred("D", "FS"));
+@Test
+public void criticalPath_Should_WorkWithTransitiveDependencies() {
+    TaskDataList tasklist = taskList()
+            .add(task("A", 4))
+            .add(task("B", 4))
+            .add(task("C", 2).withPred("A").withPred("B"))
+            .add(task("D", 2).withPred("A").withPred("B"))
+            .add(task("E", 3).withPred("A", "FS").withPred("B", "FS")
+                              .withPred("C", "FS").withPred("D", "FS"))
+            .add(task("F", 3).withPred("A", "FS").withPred("B", "FS")
+                              .withPred("C", "FS").withPred("D", "FS"));
 ```
 
 The resulting code is shorter, cleaner, less cluttered and easier to read and understand.
 
-## Fluent interface
+## Creating a fluent interface
 
 A fluent interface is an object-oriented interface whose goal is to increase code readability by creating a (small) DSL and its design is based on method chaining. A fluent interface API is designed to be readable and flow.  The construction of such an API involves more effort in its implementation. It also might make debugging of the code more difficult. So there is a price to pay for readability.
 
