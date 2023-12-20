@@ -18,7 +18,7 @@ Writing a program in the style of DSL increases the readability of your program.
 
 ## Testing a Network Diagram application
 
-Some time ago, I created a network diagram application for project management (https://github.com/dranidis/network-diagram). The goal of the application is to read tasks from a file,  create a network diagram,  and calculate the critical paths. I recently revisited the application and started doing some enhancements. In order to refresh my memory about the application I had written long ago, I took a look at the tests I had written and I found them quite difficult to read.
+Some time ago, I created a network diagram application for project management https://github.com/dranidis/network-diagram. The goal of the application is to read tasks from a file,  create a network diagram,  and calculate the critical paths. I recently revisited the application and started doing some enhancements. In order to refresh my memory about the application I had written long ago, I took a look at the tests I had written and I found them quite difficult to read.
 
 Let me give you an example of a test:
 
