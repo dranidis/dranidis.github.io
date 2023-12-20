@@ -54,7 +54,7 @@ public void criticalPath_Should_....() {
 }
 ```
 
-At the given snippet, I have skipped the assertions. The first part of the test focuses on setting up the test: creating all the necesary objects and their conncetions. In this case, the goal is to create a network diagram object with several task objects each having an id, a duration and a list of dependency objects to other tasks. A dependency has an id (a reference to the task it depends to) and the type of dependency ("FS" indicates a Finish to Start dependency).
+At the given snippet, I have skipped the assertions. The first part of the test focuses on setting up the test: creating all the necessary objects and their connections. In this case, the goal is to create a network diagram object with several task objects each having an id, a duration and a list of dependency objects to other tasks. A dependency has an id (a reference to the task it depends to) and the type of dependency ("FS" indicates a Finish to Start dependency).
 
 Employing techniques such as fluent interface and  method chaining, this piece of code may look like this:
 
@@ -103,7 +103,7 @@ The definition of `taskList`:
         return new TaskDataList();
     }
 ```
-The `taskList` method is a public static method that creates a new tasklist.
+The `taskList` method is a public static method that creates a new task list.
 It is a typical factory method. Making the method static allows us to use it without an object (even a singleton).
  This method needs to be statically imported with:
 `import static .....TaskDataList.taskList;` in order to use it without the class name.
