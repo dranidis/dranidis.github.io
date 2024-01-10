@@ -1,10 +1,10 @@
 +++
-title = 'The importance of generating Test Coverage Reports and some special use cases'
+title = 'Test coverage reports are not only for reporting coverage percentages'
 date = 2024-01-09T15:35:58+02:00
 draft = false
 showtoc = true
 tocopen = false
-tags = ['testing','coverage','manual-testing','debugging']
+tags = ['testing','coverage','manual-testing','debugging','test-coverage-report']
 
 +++
 
@@ -27,7 +27,7 @@ Why is generating coverage reports important?
 
 ## Measuring the coverage of your tests
 
-The most obvious answer is to get some measurement of the coverage of your tests. The goal is to achieve the highest coverage with the minimum number of test cases. Each test should be testing something different than the rest of the tests. A different statement, branch or function that has not been tested yet. This corresponds to some aspect of the requirements that have not been tested yet.
+The most obvious usage of a coverage report is to get some measurement of the coverage of your tests. The goal is to achieve the highest coverage with the minimum number of test cases. Each test should be testing something different than the rest of the tests. A different statement, branch or function that has not been tested yet. This corresponds to some aspect of the requirements that have not been tested yet.
 
 Increasing the test coverage percentages increases the confidence that the code is correct and the requirements have been correctly implemented.
 
