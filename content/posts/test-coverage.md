@@ -40,7 +40,7 @@ There are other important advantages in generating test coverage reports. In my 
 Analysis of uncovered code can provide some useful information about your production and testing code.
 
 - *Is your production code reachable?* --- You may identify some cases in which the production code is not reachable at all. The conditions for reaching this piece of code are never attainable. You can usually safely remove this code.
-- *Are there redundant conditions in the production code?* --- In the following example, the first condition is not necessary since if the array is empty will never include any data.
+- *Are there redundant conditions in the production code?* --- In the following example, the first condition is not necessary since an empty array will never include any data.
 
 ```
 someArray.length == 0 || !someArray.includes(someValue)
