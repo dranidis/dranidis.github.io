@@ -113,7 +113,7 @@ private void appendTaskToPaths(Task task, List<Task> predecessorTasks, Path path
 ```
 
 The method `appendTaskToPaths` receives a `task` to be "appended" to the paths (according to the method's name), a list of tasks `predecessorTasks` the tasks depends on, a `path` (whose presence was not clear to me), and a list of paths `paths`. 
-The `then` part of the `if` statement changes only the `path` argument. The `else` part of the `if` statement changes only the `paths` argument. How is this method supposed to "append" (in some way) the task to the `paths`, if in the `if` part it only appends the `task` to the `path`?
+The "then" part of the `if` statement changes only the `path` argument. The "else" part of the `if` statement changes only the `paths` argument. How is this method supposed to "append" (in some way) the task to the `paths`, if in the "then" part it only appends the `task` to the `path`?
 I had to examine the previous method `addTaskToPaths` which was the only one calling `appendTaskToPaths`. 
 
 **Can you figure out how does the method work? How does it always manage to change the `paths`? If you can, congratulations!**
@@ -130,7 +130,7 @@ I created this mess and I **HAD** to fix it.
 
 ## Aha!
 
-As it turned out, the `path` argument is one of the elements in the `paths` list. The method worked because the `Path` class was mutable. The elements of the list could be changed through their references in the list. The "then" statement mutated an existing path in the list, whereas the "then" statement added a new path to the list.
+As it turned out, the `path` argument is one of the elements in the `paths` list. The method worked because the `Path` class was mutable. The elements of the list could be changed through their references in the list. The "then" part mutated an existing path in the list, whereas the "else" part added a new path to the list.
 
 Once I understood what was happening, I rewrote the method using the new immutable `Path`: 
 ```
@@ -150,6 +150,8 @@ I think that the intention of this method is now more clear and explicit. It cha
 **Note**: Look for cases in your code where you need to clone objects. They are candidates for value objects!
 
 I am pretty sure (wishful thinking), that in the future I will be able to understand faster what the method does. Probably, it would be a good idea to rename the method as well, since it is clearly not a simple append.
+
+As a bonus, making the intent of the refactored method explicit, allowed me to easily identify a bug in the implementation, which I will not discuss in this article. 
 
 ## Conclusions
 
