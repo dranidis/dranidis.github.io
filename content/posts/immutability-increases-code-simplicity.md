@@ -74,7 +74,7 @@ The two replaced methods were called by two methods of another class. The first 
 private void addTaskToPaths(Task task, List<Path> paths) {
   boolean added = false;
   for (Path path : new ArrayList<>(paths)) {
-    List<Task> predecessorTasks = getTaskPredIsInPath(task, path);
+    List<Task> predecessorTasks = getPredecessorTasksInPath(task, path);
     if (!predecessorTasks.isEmpty()) {
       appendTaskToPaths(task, predecessorTasks, path, paths);
       added = true;
@@ -111,11 +111,13 @@ private void appendTaskToPaths(Task task, List<Task> predecessorTasks, Path path
   }
 }
 ```
-**Can you figure out what is the purpose of the code? If you can, congratulations!**
 
 The method `appendTaskToPaths` receives a `task` to be "appended" to the paths (according to the method's name), a list of tasks `predecessorTasks` the tasks depends on, a `path` (whose presence was not clear to me), and a list of paths `paths`. 
-The `then` part of the `if` statement changes only the `path` argument. The `else` part of the `if` statement changes only the `paths` argument. How is this method supposed to "append" (in some way) the task to the `paths`, if in the first part it only appends the `task` to the `path`?
+The `then` part of the `if` statement changes only the `path` argument. The `else` part of the `if` statement changes only the `paths` argument. How is this method supposed to "append" (in some way) the task to the `paths`, if in the `if` part it only appends the `task` to the `path`?
 I had to examine the previous method `addTaskToPaths` which was the only one calling `appendTaskToPaths`. 
+
+**Can you figure out how does the method work? How does it always manage to change the `paths`? If you can, congratulations!**
+
 
 
 For me, the author of the code, the intention was not clear and I spent quite a long time to figure out what is happening. That's bad news for code simplicity and it is a clear sign of **accidental complexity**.
