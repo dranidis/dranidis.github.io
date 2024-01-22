@@ -10,7 +10,7 @@ tags = ['immutability','value-object','domain-driven-design','simplicity']
 
 Immutability has many advantages, as many functional programming proponents will argue. Just to mention a few, immutable classes are side effect free and are easily testable. I am not going to go into the details of listing all the advantages of immutability in this short article. I will focus mainly on the effects on code simplicity and code comprehension.
 
-Recently, I revisited one of my older projects and by examining the code, I found that a class could be immutable, or its objects could be value objects using Domain Driven Development (DDD) terminology. According to Martin Fowler, who probably came first with the term, a value object is:
+Recently, I revisited one of my older projects and by examining the code, I found that a class could be immutable, or its objects could be value objects using Domain Driven Development (DDD) terminology. According to Martin Fowler, who probably came up first with the term, a value object is:
 
 > A small simple object, like money or a date range, whose equality isn't based on identity.
 
@@ -22,7 +22,7 @@ The project was a project I mentioned in another one of my posts: [Define your F
 
 ## The mutable Path class
 
-The `Path` class represents a sequence of tasks in the network diagram. It is implemented internally with a list of `Task` objects.  
+The `Path` class represents a sequence of tasks in the network diagram. It is implemented internally with a list of `Task` objects.  I am listing just the mutator methods:
 
 ```
 public class Path {
@@ -69,14 +69,14 @@ The new methods, instead of changing the properties of the caller object, return
 
 ## Refactoring the clients of the `Path` class
 
-The two replaced methods were used in another class in two methods. The first one was quite easy to change:
+The two replaced methods were called by two methods of another class. The first one was quite easy to change:
 ```
 private void addTaskToPaths(Task task, List<Path> paths) {
   boolean added = false;
   for (Path path : new ArrayList<>(paths)) {
-    List<Task> predTasks = getTaskPredIsInPath(task, path);
-    if (!predTasks.isEmpty()) {
-      appendTaskToPaths(task, predTasks, path, paths);
+    List<Task> predecessorTasks = getTaskPredIsInPath(task, path);
+    if (!predecessorTasks.isEmpty()) {
+      appendTaskToPaths(task, predecessorTasks, path, paths);
       added = true;
     }
   }
@@ -87,7 +87,7 @@ private void addTaskToPaths(Task task, List<Path> paths) {
   }
 }
 ```
-The mutation via `addTask` was performed inside the last if statement on an empty path. Replacing the three lines with one already made the code simpler:
+The mutation via `addTask` was performed on an empty path, inside the last `if` statement. Replacing the three lines with one already made the code simpler:
 ```
   if (!added) {
     paths.add(new Path().addTask(task));
@@ -99,9 +99,9 @@ The second client method was not so easy to change. I had trouble understanding 
 Here is the method:
 
 ```
-private void appendTaskToPaths(Task task, List<Task> predTasks, Path path, 
+private void appendTaskToPaths(Task task, List<Task> predecessorTasks, Path path, 
                                 List<Path> paths) {
-  if (predTasks.contains(path.lastTask())) {
+  if (predecessorTasks.contains(path.lastTask())) {
       path.addTask(task);
   } else {
       Path clonedPath = new Path(path.tasks());
@@ -113,8 +113,8 @@ private void appendTaskToPaths(Task task, List<Task> predTasks, Path path,
 ```
 **Can you figure out what is the purpose of the code? If you can, congratulations!**
 
-The method `appendTaskToPaths` receives a `task` to be "appended" to the paths (according to the method's name), a list of tasks `predTasks` the tasks depends on, a `path` (whose presence was not clear to me), and a list of paths `paths`. 
-The "then" part of the if statement changes only the `path` argument. The "else" part of the if statement changes only the `paths` argument. How is this method supposed to "append" (in some way) the task to the `paths`, if in the first part it only appends the `task` to the `path`?
+The method `appendTaskToPaths` receives a `task` to be "appended" to the paths (according to the method's name), a list of tasks `predecessorTasks` the tasks depends on, a `path` (whose presence was not clear to me), and a list of paths `paths`. 
+The `then` part of the `if` statement changes only the `path` argument. The `else` part of the `if` statement changes only the `paths` argument. How is this method supposed to "append" (in some way) the task to the `paths`, if in the first part it only appends the `task` to the `path`?
 I had to examine the previous method `addTaskToPaths` which was the only one calling `appendTaskToPaths`. 
 
 
@@ -132,9 +132,9 @@ As it turned out, the `path` argument is one of the elements in the `paths` list
 
 Once I understood what was happening, I rewrote the method using the new immutable `Path`: 
 ```
-private void appendTaskToPaths(Task task, List<Task> predTasks, Path path, 
+private void appendTaskToPaths(Task task, List<Task> predecessorTasks, Path path, 
                                 List<Path> paths) {
-  if (predTasks.contains(path.lastTask())) {
+  if (predecessorTasks.contains(path.lastTask())) {
     paths.remove(path);
     paths.add(path.addTask(task));
   } else {
@@ -143,7 +143,9 @@ private void appendTaskToPaths(Task task, List<Task> predTasks, Path path,
 }
 ```
 
-I think that the intention of this method is now more clear and explicit. It changes the `paths` list by either replacing an existing path (by removing the old and adding the new path), or by adding a new path (where the last task is removed and the new task is added). The role of the `path` parameter also became more clear. It is explicit that the `path` is part of the list `paths`.
+I think that the intention of this method is now more clear and explicit. It changes the `paths` list by either replacing an existing path (by removing the old and adding the new path), or by adding a new path (where the last task is removed and the new task is added). The role of the `path` parameter also became more clear. It is explicit that the `path` is part of the list `paths`. Additionally, there is no need for cloning, since the class is immutable and new instances are returned anyway.
+
+**Note**: Look for cases in your code where you need to clone objects. They are candidates for value objects!
 
 I am pretty sure (wishful thinking), that in the future I will be able to understand faster what the method does. Probably, it would be a good idea to rename the method as well, since it is clearly not a simple append.
 
