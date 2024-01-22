@@ -1,7 +1,7 @@
 +++
 title = 'Immutability increases Code Simplicity'
 date = 2024-01-21T15:15:02+02:00
-draft = true
+draft = false
 tags = ['immutability','value-object','domain-driven-design','simplicity']
 
 +++
