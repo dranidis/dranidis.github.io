@@ -155,7 +155,7 @@ As a bonus, making the intent of the refactored method explicit, allowed me to e
 
 ## Conclusions
 
-As an afterthought, I would have avoided all this trouble, if I had modelled the `Path` class as immutable from the beginning. In that case, it would have never passed my mind to implement the `appendTaskToPaths` the way it was. It would simply not be possible! Restricting myself to using paths as immutable value objects would have made the intent of the code clear from the beginning.
+As an afterthought, I would have avoided all this trouble, if I had modelled the `Path` class as immutable from the beginning. In that case, it would have never occured to me to implement the `appendTaskToPaths` the way it was. It would simply not be possible! Restricting myself to using paths as immutable value objects would have made the intent of the code clear from the beginning.
 
 Does immutability always increase code simplicity? Sometimes, it might be simply easier to mutate the state of an object instead of creating a new instance. It might also be a matter of preference. In case of uncertainty, trying both approaches might reveal what's best. If however you are in doubt, I would strongly suggest to go the immutability path. There are less chances you will regret it. I did!
 
