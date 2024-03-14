@@ -1,5 +1,5 @@
 +++
-title = 'Where Do Interfaces Belong? Clients or implementations?'
+title = 'Where do interfaces belong? Clients or implementations?'
 date = 2024-03-14T13:50:16+02:00
 draft = false
 showtoc = true
