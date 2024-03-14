@@ -1,7 +1,10 @@
 +++
 title = 'Where Do Interfaces Belong? Clients or implementations?'
 date = 2024-03-14T13:50:16+02:00
-draft = true
+draft = false
+showtoc = true
+tocopen = false
+tags = ['dependency-inversion','design','interface','domain','unit-testing','modules','code-structure']
 +++
 
 I was recently involved, once again, in a debate about:
