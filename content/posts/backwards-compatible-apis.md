@@ -1,7 +1,7 @@
 +++
-title = 'API Changes Should Be Backward Compatible Until All Clients Use the Updated Version'
+title = 'API changes should be Backward Compatible until all clients use the updated version'
 date = 2024-09-13T19:24:15+03:00
-draft = true
+draft = false
 showtoc = true
 tocopen = false
 tags = ['api-design', 'breaking-changes', 'backward-compatibility', 'consumer-driven-testing','pact']
