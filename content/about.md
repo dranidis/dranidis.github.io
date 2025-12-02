@@ -11,16 +11,22 @@ hidemeta = true
 disableShare = true
 +++
 
-I am **Dimitris Dranidis**, a Computer Science educator and a Quality Assurance practitioner. I am passionate about software quality, clean code, testing and in particular automated testing, agility and education.
+I am **Dimitris Dranidis**, a Principal Software Engineer, Quality Architect, and a Computer Science Educator.
+
+Passionate about quality, I focus on clean architecture, test-driven development, model-based and contract testing, and continuous improvement. I have extensive experience refactoring complex systems, integrating quality monitoring platforms, and building tools that enhance reliability, maintainability, and developer productivity. As a mentor and collaborator, I cultivate a cross-team quality culture, support professional growth, and contribute to both open-source software and academic research, consistently delivering maintainable, high-quality solutions across enterprise and educational environments.
+
+I’m also a programming language polyglot, comfortable across functional, logic, object-oriented, procedural, and concurrent paradigms. My experience spans Java, C, C++, C#, Go, Scala, Clojure, ClojureScript, JavaScript, TypeScript, Python, PHP, Ruby, Prolog, SML, and CML, allowing me to choose the right tool for each problem and guide teams in adopting the most suitable technology stacks and programming styles.
 
 ## Professional Experience
 
-- QA Lead - BetAdvanced
-- Associate Professor (served as Head of Department) at the Computer Science department at CITY College, CITY College, University of York Europe Campus
+- Quality Assurance Lead - BetAdvanced
+- Principal Software Engineer - Freelance Consultant
+- Associate Professor (served as Head of Department, Academic Director of Postgraduate Studies) at the Computer Science department at CITY College, CITY College, University of York Europe Campus
 
 ## Education
 
 - PhD in Computer Science, Ludwig-Maximilian's-University, Munich, Germany
+- Postgraduate Certificate in Learning and Teaching, The University of Sheffield
 
 ## Skills
 
